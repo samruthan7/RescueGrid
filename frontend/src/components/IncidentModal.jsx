@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   X, 
   MapPin, 
@@ -14,11 +14,16 @@ import {
   Trash2, 
   SlidersHorizontal,
   CheckCircle2,
-  Calendar
+  Calendar,
+  Video,
+  Bot,
+  Loader2,
+  AlertCircle
 } from 'lucide-react';
 import SeverityBadge from './SeverityBadge';
 import StatusBadge from './StatusBadge';
 import { getMapUrl, formatExactTime } from '../utils/formatters';
+import { analyticsApi } from '../services/api';
 
 export default function IncidentModal({
   incident,
@@ -38,6 +43,29 @@ export default function IncidentModal({
 
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+
+  // Video playback state
+  const [videoUrl, setVideoUrl] = useState(null);
+  const [videoLoading, setVideoLoading] = useState(false);
+  const [videoError, setVideoError] = useState(null);
+
+  useEffect(() => {
+    // Fetch signed video URL when modal opens (if incident has media)
+    const fetchVideoUrl = async () => {
+      setVideoLoading(true);
+      try {
+        const res = await analyticsApi.getVideoUrl(incident.id);
+        if (res && res.url) {
+          setVideoUrl(res.url);
+        }
+      } catch (e) {
+        // No video available — silently ignore
+      } finally {
+        setVideoLoading(false);
+      }
+    };
+    fetchVideoUrl();
+  }, [incident.id]);
 
   if (!incident) return null;
 
@@ -89,6 +117,7 @@ export default function IncidentModal({
                   {incident.id}
                 </span>
                 <SeverityBadge severity={effectiveSeverity} size="md" />
+                {incident.priorityLabel && <span className="rounded border border-zinc-600 px-2 py-1 text-xs font-semibold text-zinc-200" title={`Priority score ${Number(incident.priorityScore || 0).toFixed(1)}`}>Priority: {incident.priorityLabel}</span>}
                 <StatusBadge status={incident.status} size="md" />
                 {incident.severityOverride && (
                   <span className="text-[11px] px-2 py-0.5 rounded-full bg-gold/15 text-gold border border-gold/40">
@@ -195,6 +224,149 @@ export default function IncidentModal({
               )}
             </div>
 
+            {/* Video Evidence Player */}
+            <div className="bg-[#181818] rounded-xl border border-zinc-800 overflow-hidden">
+              <div className="px-4 py-2.5 border-b border-zinc-800 flex items-center gap-2 bg-[#111]">
+                <Video className="w-3.5 h-3.5 text-gold" />
+                <h3 className="text-xs uppercase tracking-wider text-gold font-semibold">Incident Video Evidence</h3>
+              </div>
+              <div className="p-4">
+                {videoLoading && (
+                  <div className="flex items-center gap-2 text-zinc-400 text-xs">
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Loading secure video link...</span>
+                  </div>
+                )}
+                {!videoLoading && videoUrl && (
+                  <video
+                    controls
+                    src={videoUrl}
+                    className="w-full max-h-56 rounded-lg bg-black"
+                    preload="metadata"
+                  />
+                )}
+                {!videoLoading && !videoUrl && (
+                  <p className="text-xs text-zinc-500 italic">No video evidence uploaded for this incident.</p>
+                )}
+              </div>
+            </div>
+
+            {/* AI Analysis Section */}
+            {(incident.aiStatus || incident.aiAnalysis) && (
+              <div className="bg-[#181818] rounded-xl border border-zinc-800 overflow-hidden">
+                <div className="px-4 py-2.5 border-b border-zinc-800 flex items-center justify-between bg-[#111]">
+                  <div className="flex items-center gap-2">
+                    <Bot className="w-3.5 h-3.5 text-gold" />
+                    <h3 className="text-xs uppercase tracking-wider text-gold font-semibold">AI Video Analysis</h3>
+                  </div>
+                  {incident.aiStatus && (
+                    <span className={`text-[11px] px-2 py-0.5 rounded-full border font-medium ${
+                      incident.aiStatus === 'done' || incident.aiStatus === 'completed'
+                        ? 'bg-severity-low/15 text-severity-low border-severity-low/30'
+                        : incident.aiStatus === 'failed'
+                        ? 'bg-zinc-800 text-zinc-500 border-zinc-700'
+                        : 'bg-gold/15 text-gold border-gold/30'
+                    }`}>
+                      {incident.aiStatus === 'done' || incident.aiStatus === 'completed' ? '✓ Complete'
+                        : incident.aiStatus === 'failed' ? '✗ Failed'
+                        : '⏳ Analyzing'}
+                    </span>
+                  )}
+                </div>
+                <div className="p-4 space-y-3">
+                  {/* Needs human review warning */}
+                  {incident.needsHumanReview && (
+                    <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/40 text-amber-300 text-xs flex items-start gap-2">
+                      <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-semibold">⚠️ Human Review Required</p>
+                        <p className="text-amber-400/80 mt-0.5">
+                          The video or description raised authenticity/mismatch flags. 
+                          Verify before escalating or closing this incident.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  {incident.aiAnalysis && (
+                    <>
+                      {/* Confidence */}
+                      {incident.aiAnalysis.confidence != null && (
+                        <div className="space-y-1">
+                          <div className="flex justify-between text-xs text-zinc-400">
+                            <span>AI Confidence</span>
+                            <span className="font-mono font-bold text-gold">
+                              {Math.round(incident.aiAnalysis.confidence * 100)}%
+                            </span>
+                          </div>
+                          <div className="w-full h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                            <div
+                              className="h-full bg-gold rounded-full transition-all"
+                              style={{ width: `${Math.round(incident.aiAnalysis.confidence * 100)}%` }}
+                            />
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Summary */}
+                      {incident.aiAnalysis.summary && (
+                        <div>
+                          <span className="text-[11px] text-zinc-500 uppercase tracking-wider font-semibold block mb-1">AI Summary</span>
+                          <p className="text-xs text-zinc-200">{incident.aiAnalysis.summary}</p>
+                        </div>
+                      )}
+
+                      {/* Hazards */}
+                      {incident.aiAnalysis.hazards_visible && incident.aiAnalysis.hazards_visible.length > 0 && (
+                        <div>
+                          <span className="text-[11px] text-zinc-500 uppercase tracking-wider font-semibold block mb-1.5">Hazards Detected</span>
+                          <div className="flex flex-wrap gap-1.5">
+                            {incident.aiAnalysis.hazards_visible.map((h, i) => (
+                              <span key={i} className="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-severity-critical/15 text-severity-critical border border-severity-critical/30">
+                                {h}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Recommended Response */}
+                      {incident.aiAnalysis.recommended_response && incident.aiAnalysis.recommended_response.length > 0 && (
+                        <div>
+                          <span className="text-[11px] text-zinc-500 uppercase tracking-wider font-semibold block mb-1.5">Recommended Units</span>
+                          <div className="flex flex-wrap gap-1.5">
+                            {incident.aiAnalysis.recommended_response.map((r, i) => (
+                              <span key={i} className="px-2 py-0.5 rounded-full text-[11px] bg-gold/10 text-gold border border-gold/30">
+                                {r}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* AI Reasons */}
+                      {incident.aiAnalysis.reasons && incident.aiAnalysis.reasons.length > 0 && (
+                        <div>
+                          <span className="text-[11px] text-zinc-500 uppercase tracking-wider font-semibold block mb-1">AI Factors</span>
+                          <ul className="text-xs text-zinc-300 space-y-1 list-disc pl-4">
+                            {incident.aiAnalysis.reasons.map((r, i) => (
+                              <li key={i}>
+                                <span className="text-gold font-semibold">[AI]</span> {r}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </>
+                  )}
+
+                  {incident.aiStatus === 'failed' && !incident.aiAnalysis && (
+                    <p className="text-xs text-zinc-500">AI analysis failed. Rule-based severity applies.</p>
+                  )}
+                </div>
+              </div>
+            )}
+
             {/* Severity Assessment & Override */}
             <div className="bg-[#181818] rounded-xl p-4 border border-gold/20 space-y-3">
               <div className="flex items-center justify-between">
@@ -288,7 +460,7 @@ export default function IncidentModal({
                       className="w-full bg-black border border-gold/40 text-white rounded px-2.5 py-1.5 text-xs focus:outline-none focus:border-gold"
                     >
                       <option value="Reported">Reported</option>
-                      <option value="Pending">Pending</option>
+                      <option value="Assigned" disabled>Assigned (assign a team)</option>
                       <option value="In Progress">In Progress</option>
                       <option value="Resolved">Resolved</option>
                     </select>

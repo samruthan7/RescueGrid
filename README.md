@@ -84,7 +84,7 @@ Configured in `backend/.env`:
 | 7 | **Safe Field Sanitization** | Passed | Public tracking endpoint omits personal contact details; text inputs stripped of harmful scripts. |
 | 8 | **Authority Authentication** | Passed | `/authority/login` authenticates credentials and issues signed JWT token protecting all `/api/admin/*` routes. |
 | 9 | **Interactive Command Dashboard** | Passed | `/authority` displays 3D-tilt stat cards, 6-category Recharts bar chart, severity distribution chart, searchable/filterable table, and 15-second auto-refresh. |
-| 10 | **Incident Lifecycle Management**| Passed | Slide-over panel allows updating status (Reported, Pending, In Progress, Resolved) with audit timeline, severity override, OSM map link, and deletion modal. |
+| 10 | **Incident Lifecycle Management**| Passed | Slide-over panel tracks Reported, Assigned, In Progress, and Resolved with an audit timeline, severity override, map link, and deletion modal. |
 
 ---
 
@@ -126,3 +126,39 @@ Configured in `backend/.env`:
    - Scroll to the bottom of the panel, click **"Delete Report"**.
    - Confirm in the modal prompt (`"This cannot be undone"`).
    - Verify the incident is removed and stats update immediately.
+
+## Offline Demo Mode
+
+Set `DEMO_MODE=true` and `STORAGE_DRIVER=json` in `backend/.env` to force local JSON storage and deterministic mocked AI analysis. Start the backend, then run `npm run seed` from the repository root. The seed creates sample incidents and 10 response teams near Tirupati; it includes older reports so the priority queue has visible age differences. If Gemini is unreachable, the AI analysis service returns its deterministic mock result. If Supabase is unreachable, JSON storage handles incidents, teams, hotspots, and media metadata; uploaded video files use local disk storage. The frontend and backend should be on the same machine for local video playback.
+
+## Final Demo Script
+
+1. Seed with `npm run seed`, sign in at `/authority/login`, and open the authority dashboard. The sample queue should show priority scores and labels; the seed includes reports with different ages and two Busy sample teams.
+2. To trigger a hotspot, submit three reports from `/report` with coordinates within the configured radius (default 1 km) during the configured window (default 60 minutes). The hotspot alert is created after the third nearby report; use the same location and vary the incident details.
+3. Attach a short valid MP4, WebM, or QuickTime video to a report. The backend validates file signature and size, then runs Gemini analysis when configured. In `DEMO_MODE`, it shows deterministic mock analysis instead.
+4. With `DEMO_MODE=true`, disconnect venue Wi-Fi: the app keeps JSON persistence and local media playback; AI analysis uses its deterministic mock. In normal Supabase mode, a live Supabase outage interrupts database-backed API requests. Use `GET /api/health/db` to confirm the active driver.
+
+## Architecture
+
+```mermaid
+flowchart LR
+  Citizen[Citizen browser] -->|Reports, tracking| API[Express API]
+  Authority[Authority dashboard] -->|JWT protected dispatch and analytics| API
+  API --> Validate[Validators and rate limits]
+  Validate --> Incident[Incident and priority services]
+  Incident --> JSON[(JSON repositories)]
+  Incident --> Supabase[(Supabase Postgres and PostGIS)]
+  Incident --> Media[Local or Supabase video storage]
+  Incident --> AI[Gemini or deterministic demo mock]
+  Incident --> Hotspot[Geospatial hotspot service]
+  Hotspot --> JSON
+  Hotspot --> Supabase
+```
+
+## Security Review Notes
+
+- Frontend code uses only the public API origin; Supabase service role and Gemini credentials are read by the backend. Do not add those values to `VITE_*` variables.
+- The schema enables RLS on every table, including teams and assignment history, and defines no public policies. Backend database access uses the service role.
+- Public incident tracking and map responses omit direct contact fields; map coordinates are fuzzed. Team administration is mounted behind authority JWT authentication.
+- Video uploads are constrained by MIME type, magic-byte signature, and 50 MB maximum size. Public report submission is rate limited.
+- CORS allows only the configured `CLIENT_ORIGIN`.

@@ -1,92 +1,569 @@
 [
   {
-    "id": "INC-U5T29",
-    "title": "3 car collision",
-    "description": "car accidents near crescent college",
-    "category": "Road Accident",
-    "location": "GPS Coordinates [12.876661, 80.084504]",
-    "latitude": 12.876661,
-    "longitude": 80.084504,
-    "peopleAffected": 2,
-    "contactName": "",
-    "contactPhone": "",
+    "id": "INC-XFWU8",
+    "citizenId": "09534654-4d16-4c5d-bbcf-6d9488b2afd0",
+    "title": "Hostel Roof Water Leakage Emergency",
+    "description": "Severe water tank overflow flooding electrical switchboard in corridor. Risk of electrocution.",
+    "category": "Other Emergencies",
+    "location": "SVU Mens Hostel 2, Tirupati",
+    "latitude": 13.633,
+    "longitude": 79.4015,
+    "peopleAffected": 5,
+    "contactName": "Venkat Raman",
+    "contactPhone": "+919849012345",
     "contactEmail": "",
-    "peopleTrapped": "Yes",
-    "immediateDanger": "No",
-    "injuries": "Minor",
-    "severity": "High",
-    "severityScore": 7,
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "None",
+    "severity": "Medium",
+    "severityScore": 6,
     "severityReasons": [
-      "2 person(s) affected (+1)",
-      "Road Accident category base weight (+2)",
-      "People trapped confirmed (+3)",
-      "Minor injuries reported (+1)"
+      "5 people affected (+2)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)"
     ],
     "severityOverride": null,
-    "status": "Reported",
+    "finalSeverity": "Medium",
+    "isDraft": true,
+    "aiStatus": "none",
+    "aiSeverity": null,
+    "aiConfidence": null,
+    "aiAnalysis": null,
+    "needsHumanReview": false,
+    "status": "Draft",
+    "assignedTeamId": null,
+    "assignedAt": null,
+    "priorityScore": 44.5,
+    "priorityLabel": "Low",
+    "priorityBreakdown": [
+      {
+        "factor": "severity",
+        "points": 40,
+        "note": "Final severity Medium."
+      },
+      {
+        "factor": "peopleAffected",
+        "points": 2.5,
+        "note": "5 people counted (maximum 50)."
+      },
+      {
+        "factor": "waitingTime",
+        "points": 0,
+        "note": "Waiting time contributes 0.5 points per minute, capped at 30 (0 minutes elapsed)."
+      },
+      {
+        "factor": "category",
+        "points": 2,
+        "note": "Other Emergencies emergency category weight."
+      }
+    ],
     "statusHistory": [
       {
-        "status": "Reported",
-        "at": "2026-11-10T07:13:47.130Z",
+        "status": "Draft",
+        "at": "2026-11-10T10:11:37.860Z",
         "note": "Initial incident report logged"
       }
     ],
-    "createdAt": "2026-11-10T07:13:47.130Z",
-    "updatedAt": "2026-11-10T07:13:47.130Z"
+    "isSample": false,
+    "createdAt": "2026-11-10T10:11:37.860Z",
+    "updatedAt": "2026-11-10T10:11:37.860Z"
   },
   {
-    "id": "INC-KTA2L",
-    "title": "2 car collision",
-    "description": "2-3 people affected near crescent",
-    "category": "Road Accident",
-    "location": "GPS Coordinates [12.87663, 80.084532]",
-    "latitude": 12.87663,
-    "longitude": 80.084532,
-    "peopleAffected": 3,
-    "contactName": "",
-    "contactPhone": "",
+    "id": "INC-J4XS6",
+    "citizenId": "09534654-4d16-4c5d-bbcf-6d9488b2afd0",
+    "title": "Hostel Roof Water Leakage Emergency",
+    "description": "Severe water tank overflow flooding electrical switchboard in corridor. Risk of electrocution.",
+    "category": "Other Emergencies",
+    "location": "SVU Mens Hostel 2, Tirupati",
+    "latitude": 13.633,
+    "longitude": 79.4015,
+    "peopleAffected": 5,
+    "contactName": "Venkat Raman",
+    "contactPhone": "+919849012345",
     "contactEmail": "",
-    "peopleTrapped": "Yes",
+    "peopleTrapped": "No",
     "immediateDanger": "Yes",
-    "injuries": "Serious",
-    "severity": "Critical",
-    "severityScore": 13,
+    "injuries": "None",
+    "severity": "Medium",
+    "severityScore": 6,
     "severityReasons": [
-      "3 people affected (+2)",
-      "Road Accident category base weight (+2)",
-      "People trapped confirmed (+3)",
-      "Immediate danger to life reported (+3)",
-      "Serious injuries confirmed (+3)"
+      "5 people affected (+2)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)"
     ],
     "severityOverride": null,
+    "finalSeverity": "Medium",
+    "isDraft": true,
+    "aiStatus": "none",
+    "aiSeverity": null,
+    "aiConfidence": null,
+    "aiAnalysis": null,
+    "needsHumanReview": false,
+    "status": "Draft",
+    "assignedTeamId": null,
+    "assignedAt": null,
+    "priorityScore": 44.5,
+    "priorityLabel": "Low",
+    "priorityBreakdown": [
+      {
+        "factor": "severity",
+        "points": 40,
+        "note": "Final severity Medium."
+      },
+      {
+        "factor": "peopleAffected",
+        "points": 2.5,
+        "note": "5 people counted (maximum 50)."
+      },
+      {
+        "factor": "waitingTime",
+        "points": 0,
+        "note": "Waiting time contributes 0.5 points per minute, capped at 30 (0 minutes elapsed)."
+      },
+      {
+        "factor": "category",
+        "points": 2,
+        "note": "Other Emergencies emergency category weight."
+      }
+    ],
+    "statusHistory": [
+      {
+        "status": "Draft",
+        "at": "2026-11-10T10:09:43.299Z",
+        "note": "Initial incident report logged"
+      }
+    ],
+    "isSample": false,
+    "createdAt": "2026-11-10T10:09:43.299Z",
+    "updatedAt": "2026-11-10T10:09:43.299Z"
+  },
+  {
+    "id": "INC-PYJUU",
+    "citizenId": "09534654-4d16-4c5d-bbcf-6d9488b2afd0",
+    "title": "Hostel Roof Water Leakage Emergency",
+    "description": "Severe water tank overflow flooding electrical switchboard in corridor. Risk of electrocution.",
+    "category": "Other Emergencies",
+    "location": "SVU Mens Hostel 2, Tirupati",
+    "latitude": 13.633,
+    "longitude": 79.4015,
+    "peopleAffected": 5,
+    "contactName": "Venkat Raman",
+    "contactPhone": "+919849012345",
+    "contactEmail": "",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "None",
+    "severity": "Medium",
+    "severityScore": 6,
+    "severityReasons": [
+      "5 people affected (+2)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)"
+    ],
+    "severityOverride": null,
+    "finalSeverity": "Medium",
+    "isDraft": true,
+    "aiStatus": "none",
+    "aiSeverity": null,
+    "aiConfidence": null,
+    "aiAnalysis": null,
+    "needsHumanReview": false,
+    "status": "Draft",
+    "assignedTeamId": null,
+    "assignedAt": null,
+    "priorityScore": 44.5,
+    "priorityLabel": "Low",
+    "priorityBreakdown": [
+      {
+        "factor": "severity",
+        "points": 40,
+        "note": "Final severity Medium."
+      },
+      {
+        "factor": "peopleAffected",
+        "points": 2.5,
+        "note": "5 people counted (maximum 50)."
+      },
+      {
+        "factor": "waitingTime",
+        "points": 0,
+        "note": "Waiting time contributes 0.5 points per minute, capped at 30 (0 minutes elapsed)."
+      },
+      {
+        "factor": "category",
+        "points": 2,
+        "note": "Other Emergencies emergency category weight."
+      }
+    ],
+    "statusHistory": [
+      {
+        "status": "Draft",
+        "at": "2026-11-10T10:05:45.846Z",
+        "note": "Initial incident report logged"
+      }
+    ],
+    "isSample": false,
+    "createdAt": "2026-11-10T10:05:45.846Z",
+    "updatedAt": "2026-11-10T10:05:45.846Z"
+  },
+  {
+    "id": "INC-YFWUM",
+    "citizenId": "09534654-4d16-4c5d-bbcf-6d9488b2afd0",
+    "title": "Hostel Roof Water Leakage Emergency",
+    "description": "Severe water tank overflow flooding electrical switchboard in corridor. Risk of electrocution.",
+    "category": "Other Emergencies",
+    "location": "SVU Mens Hostel 2, Tirupati",
+    "latitude": 13.633,
+    "longitude": 79.4015,
+    "peopleAffected": 5,
+    "contactName": "Venkat Raman",
+    "contactPhone": "+919849012345",
+    "contactEmail": "",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "None",
+    "severity": "Medium",
+    "severityScore": 6,
+    "severityReasons": [
+      "5 people affected (+2)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)"
+    ],
+    "severityOverride": null,
+    "finalSeverity": "Medium",
+    "isDraft": true,
+    "aiStatus": "none",
+    "aiSeverity": null,
+    "aiConfidence": null,
+    "aiAnalysis": null,
+    "needsHumanReview": false,
+    "status": "Draft",
+    "assignedTeamId": null,
+    "assignedAt": null,
+    "priorityScore": 44.5,
+    "priorityLabel": "Low",
+    "priorityBreakdown": [
+      {
+        "factor": "severity",
+        "points": 40,
+        "note": "Final severity Medium."
+      },
+      {
+        "factor": "peopleAffected",
+        "points": 2.5,
+        "note": "5 people counted (maximum 50)."
+      },
+      {
+        "factor": "waitingTime",
+        "points": 0,
+        "note": "Waiting time contributes 0.5 points per minute, capped at 30 (0 minutes elapsed)."
+      },
+      {
+        "factor": "category",
+        "points": 2,
+        "note": "Other Emergencies emergency category weight."
+      }
+    ],
+    "statusHistory": [
+      {
+        "status": "Draft",
+        "at": "2026-11-10T10:02:45.432Z",
+        "note": "Initial incident report logged"
+      }
+    ],
+    "isSample": false,
+    "createdAt": "2026-11-10T10:02:45.432Z",
+    "updatedAt": "2026-11-10T10:02:45.432Z"
+  },
+  {
+    "id": "INC-RZM7Y",
+    "citizenId": "09534654-4d16-4c5d-bbcf-6d9488b2afd0",
+    "title": "Hostel Roof Water Leakage Emergency",
+    "description": "Severe water tank overflow flooding electrical switchboard in corridor. Risk of electrocution.",
+    "category": "Other Emergencies",
+    "location": "SVU Mens Hostel 2, Tirupati",
+    "latitude": 13.633,
+    "longitude": 79.4015,
+    "peopleAffected": 5,
+    "contactName": "Venkat Raman",
+    "contactPhone": "+919849012345",
+    "contactEmail": "",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "None",
+    "severity": "Medium",
+    "severityScore": 6,
+    "severityReasons": [
+      "5 people affected (+2)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)"
+    ],
+    "severityOverride": null,
+    "finalSeverity": "Medium",
+    "isDraft": true,
+    "aiStatus": "none",
+    "aiSeverity": null,
+    "aiConfidence": null,
+    "aiAnalysis": null,
+    "needsHumanReview": false,
+    "status": "Draft",
+    "assignedTeamId": null,
+    "assignedAt": null,
+    "priorityScore": 44.5,
+    "priorityLabel": "Low",
+    "priorityBreakdown": [
+      {
+        "factor": "severity",
+        "points": 40,
+        "note": "Final severity Medium."
+      },
+      {
+        "factor": "peopleAffected",
+        "points": 2.5,
+        "note": "5 people counted (maximum 50)."
+      },
+      {
+        "factor": "waitingTime",
+        "points": 0,
+        "note": "Waiting time contributes 0.5 points per minute, capped at 30 (0 minutes elapsed)."
+      },
+      {
+        "factor": "category",
+        "points": 2,
+        "note": "Other Emergencies emergency category weight."
+      }
+    ],
+    "statusHistory": [
+      {
+        "status": "Draft",
+        "at": "2026-11-10T10:01:50.188Z",
+        "note": "Initial incident report logged"
+      }
+    ],
+    "isSample": false,
+    "createdAt": "2026-11-10T10:01:50.188Z",
+    "updatedAt": "2026-11-10T10:01:50.188Z"
+  },
+  {
+    "id": "INC-8MZWJ",
+    "citizenId": "09534654-4d16-4c5d-bbcf-6d9488b2afd0",
+    "title": "Hostel Roof Water Leakage Emergency",
+    "description": "Severe water tank overflow flooding electrical switchboard in corridor. Risk of electrocution.",
+    "category": "Other Emergencies",
+    "location": "SVU Mens Hostel 2, Tirupati",
+    "latitude": 13.633,
+    "longitude": 79.4015,
+    "peopleAffected": 5,
+    "contactName": "Venkat Raman",
+    "contactPhone": "+919849012345",
+    "contactEmail": "",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "None",
+    "severity": "Medium",
+    "severityScore": 6,
+    "severityReasons": [
+      "5 people affected (+2)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)"
+    ],
+    "severityOverride": null,
+    "finalSeverity": "Medium",
+    "isDraft": true,
+    "aiStatus": "none",
+    "aiSeverity": null,
+    "aiConfidence": null,
+    "aiAnalysis": null,
+    "needsHumanReview": false,
+    "status": "Draft",
+    "statusHistory": [
+      {
+        "status": "Draft",
+        "at": "2026-11-10T09:52:00.124Z",
+        "note": "Initial incident report logged"
+      }
+    ],
+    "isSample": false,
+    "createdAt": "2026-11-10T09:52:00.124Z",
+    "updatedAt": "2026-11-10T09:52:00.124Z"
+  },
+  {
+    "id": "INC-RKUFA",
+    "citizenId": "09534654-4d16-4c5d-bbcf-6d9488b2afd0",
+    "title": "Hostel Roof Water Leakage Emergency",
+    "description": "Severe water tank overflow flooding electrical switchboard in corridor. Risk of electrocution.",
+    "category": "Other Emergencies",
+    "location": "SVU Mens Hostel 2, Tirupati",
+    "latitude": 13.633,
+    "longitude": 79.4015,
+    "peopleAffected": 5,
+    "contactName": "Venkat Raman",
+    "contactPhone": "+919849012345",
+    "contactEmail": "",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "None",
+    "severity": "Medium",
+    "severityScore": 6,
+    "severityReasons": [
+      "5 people affected (+2)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)"
+    ],
+    "severityOverride": null,
+    "finalSeverity": "Medium",
+    "isDraft": true,
+    "aiStatus": "none",
+    "aiSeverity": null,
+    "aiConfidence": null,
+    "aiAnalysis": null,
+    "needsHumanReview": false,
+    "status": "Draft",
+    "statusHistory": [
+      {
+        "status": "Draft",
+        "at": "2026-11-10T09:28:38.372Z",
+        "note": "Initial incident report logged"
+      }
+    ],
+    "isSample": false,
+    "createdAt": "2026-11-10T09:28:38.372Z",
+    "updatedAt": "2026-11-10T09:28:38.372Z"
+  },
+  {
+    "id": "INC-E2QND",
+    "citizenId": "09534654-4d16-4c5d-bbcf-6d9488b2afd0",
+    "title": "Hostel Roof Water Leakage Emergency",
+    "description": "Severe water tank overflow flooding electrical switchboard in corridor. Risk of electrocution.",
+    "category": "Other Emergencies",
+    "location": "SVU Mens Hostel 2, Tirupati",
+    "latitude": 13.633,
+    "longitude": 79.4015,
+    "peopleAffected": 5,
+    "contactName": "Venkat Raman",
+    "contactPhone": "+919849012345",
+    "contactEmail": "",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "None",
+    "severity": "Medium",
+    "severityScore": 6,
+    "severityReasons": [
+      "5 people affected (+2)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)"
+    ],
+    "severityOverride": null,
+    "finalSeverity": "Medium",
+    "isDraft": true,
+    "aiStatus": "none",
+    "aiSeverity": null,
+    "aiConfidence": null,
+    "aiAnalysis": null,
+    "needsHumanReview": false,
+    "status": "Draft",
+    "statusHistory": [
+      {
+        "status": "Draft",
+        "at": "2026-11-10T09:27:35.200Z",
+        "note": "Initial incident report logged"
+      }
+    ],
+    "isSample": false,
+    "createdAt": "2026-11-10T09:27:35.200Z",
+    "updatedAt": "2026-11-10T09:27:35.200Z"
+  },
+  {
+    "id": "INC-92LMF",
+    "citizenId": "09534654-4d16-4c5d-bbcf-6d9488b2afd0",
+    "title": "Hostel Roof Water Leakage Emergency",
+    "description": "Severe water tank overflow flooding electrical switchboard in corridor. Risk of electrocution.",
+    "category": "Other Emergencies",
+    "location": "SVU Mens Hostel 2, Tirupati",
+    "latitude": 13.633,
+    "longitude": 79.4015,
+    "peopleAffected": 5,
+    "contactName": "Venkat Raman",
+    "contactPhone": "+919849012345",
+    "contactEmail": "",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "None",
+    "severity": "Medium",
+    "severityScore": 6,
+    "severityReasons": [
+      "5 people affected (+2)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)"
+    ],
+    "severityOverride": null,
+    "finalSeverity": "Medium",
     "status": "Reported",
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T06:52:16.807Z",
+        "at": "2026-11-10T09:19:35.462Z",
         "note": "Initial incident report logged"
       }
     ],
-    "createdAt": "2026-11-10T06:52:16.807Z",
-    "updatedAt": "2026-11-10T06:52:16.807Z"
+    "isSample": false,
+    "createdAt": "2026-11-10T09:19:35.462Z",
+    "updatedAt": "2026-11-10T09:19:35.462Z"
+  },
+  {
+    "id": "INC-KQCHG",
+    "citizenId": "09534654-4d16-4c5d-bbcf-6d9488b2afd0",
+    "title": "Hostel Roof Water Leakage Emergency",
+    "description": "Severe water tank overflow flooding electrical switchboard in corridor. Risk of electrocution.",
+    "category": "Other Emergencies",
+    "location": "SVU Mens Hostel 2, Tirupati",
+    "latitude": 13.633,
+    "longitude": 79.4015,
+    "peopleAffected": 5,
+    "contactName": "Venkat Raman",
+    "contactPhone": "+919849012345",
+    "contactEmail": "",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "None",
+    "severity": "Medium",
+    "severityScore": 6,
+    "severityReasons": [
+      "5 people affected (+2)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)"
+    ],
+    "severityOverride": null,
+    "finalSeverity": "Medium",
+    "status": "Reported",
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T09:18:40.177Z",
+        "note": "Initial incident report logged"
+      }
+    ],
+    "isSample": false,
+    "createdAt": "2026-11-10T09:18:40.177Z",
+    "updatedAt": "2026-11-10T09:18:40.177Z"
   },
   {
     "id": "INC-DEMO01",
-    "title": "[TEST] Multi-Story Warehouse Structural Fire",
-    "description": "Industrial warehouse on 4th Avenue engulfed in flames. Thick black smoke spreading across nearby residential streets. 4 warehouse staff stranded near loading bay.",
+    "title": "[TEST] Chemical Lab Fire & Smoke Outbreak",
+    "description": "Chemistry department research wing on second floor caught fire. Thick toxic chemical smoke spreading rapidly across classrooms. 4 graduate students stranded in adjacent lab room.",
     "category": "Fire Emergency",
-    "location": "442 Industrial Parkway, Sector 8",
-    "latitude": 37.7749,
-    "longitude": -122.4194,
+    "location": "SV University Engineering Science Block, Tirupati",
+    "latitude": 13.6322,
+    "longitude": 79.402,
     "peopleAffected": 4,
-    "contactName": "Officer Miller (Simulated)",
-    "contactPhone": "+1-555-0192",
-    "contactEmail": "miller.test@cityops.gov",
+    "contactName": "Prof. K. Ramanathan (Simulated)",
+    "contactPhone": "+91-9849012345",
+    "contactEmail": "k.ramanathan@svuniversity.ac.in",
     "peopleTrapped": "Yes",
     "immediateDanger": "Yes",
     "injuries": "Serious",
     "status": "In Progress",
-    "createdAt": "2026-11-10T06:18:38.054Z",
+    "createdAt": "2026-11-10T08:51:54.367Z",
     "severity": "Critical",
     "severityScore": 18,
     "severityReasons": [
@@ -102,39 +579,40 @@
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T06:18:38.054Z",
+        "at": "2026-11-10T08:51:54.367Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       },
       {
-        "status": "Pending",
-        "at": "2026-11-10T06:20:38.054Z",
-        "note": "Triaged by Dispatch Control"
+        "status": "Reported",
+        "at": "2026-11-10T08:53:54.367Z",
+        "note": "Triaged by Tirupati Municipal Control Room"
       },
       {
         "status": "In Progress",
-        "at": "2026-11-10T06:26:38.054Z",
-        "note": "First responder unit dispatched to coordinates"
+        "at": "2026-11-10T08:59:54.367Z",
+        "note": "AP Disaster Response Force (APDRF) unit dispatched"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.061Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.369Z"
   },
   {
     "id": "INC-DEMO02",
-    "title": "[TEST] Partial Commercial Plaza Awning Collapse",
-    "description": "Heavy concrete awning collapsed above entrance of shopping plaza. Rubble is blocking entrance. Bystanders report people trapped underneath debris.",
+    "title": "[TEST] Balcony Awning Collapse at Administrative Block",
+    "description": "Heavy heritage concrete sunshade collapsed over main entrance stairs. Massive debris blocking doorway. Students report 3 people trapped underneath rubble.",
     "category": "Building Collapse",
-    "location": "Central Plaza Mall, North Gate, Grand Ave",
-    "latitude": 37.7833,
-    "longitude": -122.4167,
+    "location": "SV University Administrative Complex, Tirupati",
+    "latitude": 13.6335,
+    "longitude": 79.4005,
     "peopleAffected": 6,
-    "contactName": "Sarah Jenkins (Simulated)",
-    "contactPhone": "+1-555-0143",
-    "contactEmail": "sjenkins.test@example.com",
+    "contactName": "Campus Security Officer Murthy (Simulated)",
+    "contactPhone": "+91-9440054321",
+    "contactEmail": "security@svuniversity.edu.in",
     "peopleTrapped": "Yes",
     "immediateDanger": "Yes",
     "injuries": "Serious",
     "status": "Reported",
-    "createdAt": "2026-11-10T06:29:38.055Z",
+    "createdAt": "2026-11-10T09:01:54.368Z",
     "severity": "Critical",
     "severityScore": 19,
     "severityReasons": [
@@ -149,116 +627,119 @@
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T06:29:38.055Z",
+        "at": "2026-11-10T09:01:54.368Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.061Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.369Z"
   },
   {
     "id": "INC-DEMO03",
-    "title": "[TEST] Subway Station Cardiac Arrest - Unconscious Passenger",
-    "description": "Passenger collapsed near turnstile ticket counter. Citizen reports victim is unconscious and not breathing. CPR initiated by bystander.",
+    "title": "[TEST] Student Collapse - Unconscious with Respiratory Distress",
+    "description": "College student collapsed outside university central library during afternoon heat. Citizen reports victim is unconscious and not breathing normally. First aid CPR in progress.",
     "category": "Medical Emergency",
-    "location": "Metro Station Metro Level 2, 8th & Market",
-    "latitude": 37.7795,
-    "longitude": -122.4137,
+    "location": "SVU Central Library Quadrangle, Tirupati",
+    "latitude": 13.634,
+    "longitude": 79.4012,
     "peopleAffected": 1,
-    "contactName": "Transit Guard Evans (Simulated)",
-    "contactPhone": "+1-555-0188",
-    "contactEmail": "guard.evans@transit.gov",
+    "contactName": "Librarian V. Lakshmi (Simulated)",
+    "contactPhone": "+91-9885067890",
+    "contactEmail": "vlakshmi.svu@gmail.com",
     "peopleTrapped": "No",
     "immediateDanger": "Yes",
     "injuries": "Serious",
-    "status": "Pending",
-    "createdAt": "2026-11-10T06:11:38.055Z",
+    "status": "Reported",
+    "createdAt": "2026-11-10T08:44:54.368Z",
     "severity": "Critical",
-    "severityScore": 13,
+    "severityScore": 15,
     "severityReasons": [
       "1 person(s) affected (+1)",
       "Medical Emergency category base weight (+2)",
       "Immediate danger to life reported (+3)",
       "Serious injuries confirmed (+3)",
-      "Critical keyword(s) detected [unconscious, not breathing] (+4)"
+      "Critical keyword(s) detected [collapse, unconscious, not breathing] (+6)"
     ],
     "severityOverride": null,
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T06:11:38.055Z",
+        "at": "2026-11-10T08:44:54.368Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       },
       {
-        "status": "Pending",
-        "at": "2026-11-10T06:14:38.055Z",
-        "note": "Triaged by Dispatch Control, awaiting crew assignment"
+        "status": "Reported",
+        "at": "2026-11-10T08:47:54.368Z",
+        "note": "Triaged by Tirupati Municipal Control Room"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.061Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.369Z"
   },
   {
     "id": "INC-DEMO04",
-    "title": "[TEST] High-Speed Highway Multi-Vehicle Pileup",
-    "description": "3 sedans and a delivery van collided during sudden fog. Several motorists injured and roadway completely blocked across both lanes.",
+    "title": "[TEST] Multi-Vehicle Highway Collision at Renigunta Road",
+    "description": "Two private buses and an SUV collided near Korlagunta junction. Multiple passengers injured, wreckage completely blocking four-lane highway.",
     "category": "Road Accident",
-    "location": "Interstate Highway 101 Northbound, Exit 43B",
-    "latitude": 37.7612,
-    "longitude": -122.4021,
-    "peopleAffected": 5,
-    "contactName": "David Lee (Simulated)",
-    "contactPhone": "+1-555-0155",
-    "contactEmail": "dlee.test@example.com",
+    "location": "Renigunta Road & Korlagunta Junction, Tirupati",
+    "latitude": 13.6302,
+    "longitude": 79.435,
+    "peopleAffected": 12,
+    "contactName": "Traffic Constable Naidu (Simulated)",
+    "contactPhone": "+91-9989011223",
+    "contactEmail": "traffic.tirupati@appolice.gov.in",
     "peopleTrapped": "No",
     "immediateDanger": "Yes",
     "injuries": "Serious",
     "status": "In Progress",
-    "createdAt": "2026-11-10T05:54:38.055Z",
+    "createdAt": "2026-11-10T08:27:54.368Z",
     "severity": "Critical",
     "severityScore": 12,
     "severityReasons": [
-      "5 people affected (+2)",
+      "High impact: 12 people affected (+3)",
       "Road Accident category base weight (+2)",
       "Immediate danger to life reported (+3)",
       "Serious injuries confirmed (+3)",
-      "Moderate keyword(s) detected [injured, blocked] (+2)"
+      "Moderate keyword(s) detected [injured] (+1)"
     ],
     "severityOverride": null,
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T05:54:38.055Z",
+        "at": "2026-11-10T08:27:54.368Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       },
       {
-        "status": "Pending",
-        "at": "2026-11-10T05:56:38.055Z",
-        "note": "Triaged by Dispatch Control"
+        "status": "Reported",
+        "at": "2026-11-10T08:29:54.368Z",
+        "note": "Triaged by Tirupati Municipal Control Room"
       },
       {
         "status": "In Progress",
-        "at": "2026-11-10T06:02:38.055Z",
-        "note": "First responder unit dispatched to coordinates"
+        "at": "2026-11-10T08:35:54.368Z",
+        "note": "AP Disaster Response Force (APDRF) unit dispatched"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.062Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.369Z"
   },
   {
     "id": "INC-DEMO05",
-    "title": "[TEST] Flash River Surge Threatening Riverside Cottages",
-    "description": "Torrential downpour has caused river banks to swell. Rapidly rising water has submerged driveways and is reaching lower residential floor levels.",
+    "title": "[TEST] Flash Stream Inundation at Kapilatheertham",
+    "description": "Heavy hill runoff from Seshachalam ranges has breached drainage channels. Rising water flooding residential streets along Kapilatheertham temple road.",
     "category": "Flood",
-    "location": "Creek Road & Riverview Terrace",
-    "latitude": 37.7554,
-    "longitude": -122.4287,
+    "location": "Kapilatheertham Temple Approach Road, Tirupati",
+    "latitude": 13.6492,
+    "longitude": 79.415,
     "peopleAffected": 8,
-    "contactName": "Elena Rostova (Simulated)",
-    "contactPhone": "+1-555-0167",
-    "contactEmail": "erostova@example.org",
+    "contactName": "Suresh Reddy (Simulated)",
+    "contactPhone": "+91-9876543210",
+    "contactEmail": "suresh.reddy@example.com",
     "peopleTrapped": "No",
     "immediateDanger": "Yes",
     "injuries": "Minor",
-    "status": "Pending",
-    "createdAt": "2026-11-10T05:31:38.055Z",
+    "status": "Reported",
+    "createdAt": "2026-11-10T08:04:54.368Z",
     "severity": "Critical",
     "severityScore": 11,
     "severityReasons": [
@@ -272,69 +753,71 @@
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T05:31:38.055Z",
+        "at": "2026-11-10T08:04:54.368Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       },
       {
-        "status": "Pending",
-        "at": "2026-11-10T05:34:38.055Z",
-        "note": "Triaged by Dispatch Control, awaiting crew assignment"
+        "status": "Reported",
+        "at": "2026-11-10T08:07:54.368Z",
+        "note": "Triaged by Tirupati Municipal Control Room"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.062Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.370Z"
   },
   {
     "id": "INC-DEMO06",
-    "title": "[TEST] Industrial Gas Leak Smell Near School Playground",
-    "description": "Strong, persistent sulfur/gas leak odor detected coming from adjacent pipeline maintenance valve near school perimeter.",
+    "title": "[TEST] Commercial LPG Gas Leak near Central Railway Station",
+    "description": "High-pressure cylinder line leak at commercial food stall near Station East Gate. Strong gas leak smell spreading into passenger platforms.",
     "category": "Other Emergencies",
-    "location": "Elmwood Primary School Perimeter, 12 Oak Street",
-    "latitude": 37.7689,
-    "longitude": -122.4412,
-    "peopleAffected": 30,
-    "contactName": "Principal Vance (Simulated)",
-    "contactPhone": "+1-555-0111",
-    "contactEmail": "pvance.test@schoolops.org",
+    "location": "Tirupati Central Railway Station East Exit, Station Road",
+    "latitude": 13.6268,
+    "longitude": 79.4215,
+    "peopleAffected": 25,
+    "contactName": "Station Supervisor Prasad (Simulated)",
+    "contactPhone": "+91-9441098765",
+    "contactEmail": "prasad.rly@scr.railnet.gov.in",
     "peopleTrapped": "No",
     "immediateDanger": "Yes",
     "injuries": "None",
     "status": "Reported",
-    "createdAt": "2026-11-10T06:24:38.055Z",
+    "createdAt": "2026-11-10T08:57:54.368Z",
     "severity": "Critical",
-    "severityScore": 10,
+    "severityScore": 12,
     "severityReasons": [
-      "Mass casualty potential: 30 people affected (+4)",
+      "Mass casualty potential: 25 people affected (+4)",
       "Category 'Other Emergencies' base weight (+1)",
       "Immediate danger to life reported (+3)",
-      "Critical keyword(s) detected [gas leak] (+2)"
+      "Critical keyword(s) detected [gas leak, spreading] (+4)"
     ],
     "severityOverride": null,
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T06:24:38.055Z",
+        "at": "2026-11-10T08:57:54.368Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.062Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.370Z"
   },
   {
     "id": "INC-DEMO07",
-    "title": "[TEST] Kitchen Grease Fire Contained in Restaurant",
-    "description": "Small exhaust hood grease fire broke out during lunch rush. Staff extinguished bulk with dry powder, but heavy smoke remains throughout kitchen.",
+    "title": "[TEST] Restaurant Kitchen Fire Contained near RTC Bus Stand",
+    "description": "Grease exhaust flue caught fire in hotel kitchen. Fire extinguisher used by staff, thick smoke cleared by emergency ventilation.",
     "category": "Fire Emergency",
-    "location": "Bistro 44, 44 Market Square",
-    "latitude": 37.7915,
-    "longitude": -122.3999,
+    "location": "Bhavani Nagar near RTC Central Bus Station, Tirupati",
+    "latitude": 13.6241,
+    "longitude": 79.4248,
     "peopleAffected": 2,
-    "contactName": "Chef Marco (Simulated)",
-    "contactPhone": "+1-555-0134",
-    "contactEmail": "marco.kitchen@example.com",
+    "contactName": "Hotel Manager Srinivas (Simulated)",
+    "contactPhone": "+91-9848034567",
+    "contactEmail": "srinivas.hotel@example.com",
     "peopleTrapped": "No",
     "immediateDanger": "No",
     "injuries": "Minor",
     "status": "Resolved",
-    "createdAt": "2026-11-10T04:16:38.055Z",
+    "createdAt": "2026-11-10T06:49:54.368Z",
     "severity": "Medium",
     "severityScore": 6,
     "severityReasons": [
@@ -347,43 +830,44 @@
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T04:16:38.055Z",
+        "at": "2026-11-10T06:49:54.368Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       },
       {
         "status": "In Progress",
-        "at": "2026-11-10T04:21:38.055Z",
-        "note": "Response unit on scene"
+        "at": "2026-11-10T06:54:54.368Z",
+        "note": "APDRF / Emergency squad on scene"
       },
       {
         "status": "Resolved",
-        "at": "2026-11-10T04:46:38.055Z",
-        "note": "Scene cleared, medical check completed, hazard neutralized"
+        "at": "2026-11-10T07:19:54.368Z",
+        "note": "Hazard neutralized, area cleared and safe"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.062Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.370Z"
   },
   {
     "id": "INC-DEMO08",
-    "title": "[TEST] Fender Bender Collision in Mall Parking Lot",
-    "description": "Slow speed rear-end collision between two cars leaving parking structure. Minor bumper dent, passenger complaining of wrist sprain.",
+    "title": "[TEST] Two-Wheeler Skid Accident on Alipiri Bypass",
+    "description": "Motorcyclist slipped on gravel along Alipiri Bypass curve. Rider sustained arm abrasions, conscious and resting roadside.",
     "category": "Road Accident",
-    "location": "Westfield Mall Lower Parking B3",
-    "latitude": 37.7842,
-    "longitude": -122.4075,
-    "peopleAffected": 2,
-    "contactName": "Chloe Bennett (Simulated)",
-    "contactPhone": "+1-555-0178",
-    "contactEmail": "cbennett@example.com",
+    "location": "Alipiri Footpath Gate & Toll Complex, Tirupati",
+    "latitude": 13.6515,
+    "longitude": 79.3958,
+    "peopleAffected": 1,
+    "contactName": "Ravi Teja (Simulated)",
+    "contactPhone": "+91-9701045678",
+    "contactEmail": "raviteja.tpt@gmail.com",
     "peopleTrapped": "No",
     "immediateDanger": "No",
     "injuries": "Minor",
     "status": "Resolved",
-    "createdAt": "2026-11-10T03:16:38.055Z",
+    "createdAt": "2026-11-10T05:49:54.368Z",
     "severity": "Medium",
     "severityScore": 4,
     "severityReasons": [
-      "2 person(s) affected (+1)",
+      "1 person(s) affected (+1)",
       "Road Accident category base weight (+2)",
       "Minor injuries reported (+1)"
     ],
@@ -391,110 +875,115 @@
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T03:16:38.055Z",
+        "at": "2026-11-10T05:49:54.368Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       },
       {
         "status": "In Progress",
-        "at": "2026-11-10T03:21:38.055Z",
-        "note": "Response unit on scene"
+        "at": "2026-11-10T05:54:54.368Z",
+        "note": "APDRF / Emergency squad on scene"
       },
       {
         "status": "Resolved",
-        "at": "2026-11-10T03:46:38.055Z",
-        "note": "Scene cleared, medical check completed, hazard neutralized"
+        "at": "2026-11-10T06:19:54.368Z",
+        "note": "Hazard neutralized, area cleared and safe"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.062Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.370Z"
   },
   {
     "id": "INC-DEMO09",
-    "title": "[TEST] Overflowing Storm Drain Backed Up On Hillside",
-    "description": "Municipal storm drain clogged with fallen autumn leaves and mud. Water pooling across sidewalk, pedestrian walkway partially submerged.",
+    "title": "[TEST] Blocked Storm Canal Backing Up near Bairagipatteda",
+    "description": "Clogged canal culvert overflowing into colony lane. Pedestrian walkway submerged under 6 inches of rain water.",
     "category": "Flood",
-    "location": "Crestview Blvd & Highlands Way",
-    "latitude": 37.7441,
-    "longitude": -122.4439,
+    "location": "Bairagipatteda 3rd Cross Road, Tirupati",
+    "latitude": 13.6185,
+    "longitude": 79.4152,
     "peopleAffected": 0,
-    "contactName": "Marcus Wright (Simulated)",
-    "contactPhone": "",
-    "contactEmail": "",
-    "peopleTrapped": "No",
-    "immediateDanger": "No",
-    "injuries": "None",
-    "status": "Pending",
-    "createdAt": "2026-11-10T05:06:38.055Z",
-    "severity": "Low",
-    "severityScore": 2,
-    "severityReasons": [
-      "No people directly affected specified (+0)",
-      "Flood emergency category base weight (+2)"
-    ],
-    "severityOverride": null,
-    "statusHistory": [
-      {
-        "status": "Reported",
-        "at": "2026-11-10T05:06:38.055Z",
-        "note": "Incident reported via citizen emergency portal (Sample)"
-      },
-      {
-        "status": "Pending",
-        "at": "2026-11-10T05:09:38.055Z",
-        "note": "Triaged by Dispatch Control, awaiting crew assignment"
-      }
-    ],
-    "updatedAt": "2026-11-10T06:36:38.062Z"
-  },
-  {
-    "id": "INC-DEMO10",
-    "title": "[TEST] Cracking Brickwork on Aging Vacant Facade",
-    "description": "Noticed significant hairline cracks and loose decorative masonry along upper parapet of abandoned brick commercial building.",
-    "category": "Building Collapse",
-    "location": "Old Port District, Warehouse #14",
-    "latitude": 37.7711,
-    "longitude": -122.3892,
-    "peopleAffected": 0,
-    "contactName": "Building Inspector Roy (Simulated)",
-    "contactPhone": "+1-555-0199",
-    "contactEmail": "r.inspector@city.gov",
+    "contactName": "Colony President Sharma (Simulated)",
+    "contactPhone": "+91-9440078901",
+    "contactEmail": "sharma.resident@example.com",
     "peopleTrapped": "No",
     "immediateDanger": "No",
     "injuries": "None",
     "status": "Reported",
-    "createdAt": "2026-11-10T04:46:38.055Z",
+    "createdAt": "2026-11-10T07:39:54.368Z",
     "severity": "Low",
     "severityScore": 3,
     "severityReasons": [
       "No people directly affected specified (+0)",
-      "Building Collapse category base weight (+3)"
+      "Flood emergency category base weight (+2)",
+      "Moderate keyword(s) detected [blocked] (+1)"
     ],
     "severityOverride": null,
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T04:46:38.055Z",
+        "at": "2026-11-10T07:39:54.368Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      },
+      {
+        "status": "Reported",
+        "at": "2026-11-10T07:42:54.368Z",
+        "note": "Triaged by Tirupati Municipal Control Room"
+      }
+    ],
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.370Z"
+  },
+  {
+    "id": "INC-DEMO10",
+    "title": "[TEST] Fissured Compound Wall near SPMVV Campus",
+    "description": "Substantial structural cracks observed along 20-meter boundary retaining wall following continuous rains. Risk of masonry collapse into footpath.",
+    "category": "Building Collapse",
+    "location": "Sri Padmavathi Mahila Visvavidyalayam (SPMVV) West Wall, Tirupati",
+    "latitude": 13.6425,
+    "longitude": 79.3882,
+    "peopleAffected": 0,
+    "contactName": "Estate Officer Anitha (Simulated)",
+    "contactPhone": "+91-9866099887",
+    "contactEmail": "estate.spmvv@andhra.gov.in",
+    "peopleTrapped": "No",
+    "immediateDanger": "No",
+    "injuries": "None",
+    "status": "Reported",
+    "createdAt": "2026-11-10T07:19:54.368Z",
+    "severity": "Medium",
+    "severityScore": 5,
+    "severityReasons": [
+      "No people directly affected specified (+0)",
+      "Building Collapse category base weight (+3)",
+      "Critical keyword(s) detected [collapse] (+2)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T07:19:54.368Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.062Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.370Z"
   },
   {
     "id": "INC-DEMO11",
-    "title": "[TEST] Faint in Community Library Reading Room",
-    "description": "Student felt dizzy and fainted due to dehydration. Conscious now, drinking water and resting with staff.",
+    "title": "[TEST] Patient Fainting & Heat Exhaustion in Ruia OP Ward",
+    "description": "Elderly attendee fainted in outpatient waiting foyer. Vitals checked and IV fluids administered by duty physician.",
     "category": "Medical Emergency",
-    "location": "Civic Center Library, 2nd Floor Study Hall",
-    "latitude": 37.7788,
-    "longitude": -122.4172,
+    "location": "Ruia Government General Hospital Outpatient Entrance, Tirupati",
+    "latitude": 13.6385,
+    "longitude": 79.4085,
     "peopleAffected": 1,
-    "contactName": "Librarian Davis (Simulated)",
-    "contactPhone": "+1-555-0122",
-    "contactEmail": "davis.lib@cityops.gov",
+    "contactName": "Staff Nurse Geetha (Simulated)",
+    "contactPhone": "+91-9959066554",
+    "contactEmail": "nurse.ruia@ap.gov.in",
     "peopleTrapped": "No",
     "immediateDanger": "No",
     "injuries": "None",
     "status": "Resolved",
-    "createdAt": "2026-11-10T01:36:38.055Z",
+    "createdAt": "2026-11-10T04:09:54.368Z",
     "severity": "Low",
     "severityScore": 3,
     "severityReasons": [
@@ -505,39 +994,40 @@
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T01:36:38.055Z",
+        "at": "2026-11-10T04:09:54.368Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       },
       {
         "status": "In Progress",
-        "at": "2026-11-10T01:41:38.055Z",
-        "note": "Response unit on scene"
+        "at": "2026-11-10T04:14:54.368Z",
+        "note": "APDRF / Emergency squad on scene"
       },
       {
         "status": "Resolved",
-        "at": "2026-11-10T02:06:38.055Z",
-        "note": "Scene cleared, medical check completed, hazard neutralized"
+        "at": "2026-11-10T04:39:54.368Z",
+        "note": "Hazard neutralized, area cleared and safe"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.062Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.370Z"
   },
   {
     "id": "INC-DEMO12",
-    "title": "[TEST] Fallen Traffic Signal Pole In Median",
-    "description": "High winds snapped mounting bolts of pedestrian signal pole. Pole is resting safely across lawn median, not obstructing traffic lane.",
+    "title": "[TEST] Uprooted Tree Leaning against Electrical Pole",
+    "description": "Storm winds caused heavy tamarind tree branch to rest against overhead low-tension power cables. No wires snapped yet.",
     "category": "Other Emergencies",
-    "location": "Pine Street & 5th Avenue Crosswalk",
-    "latitude": 37.7922,
-    "longitude": -122.4044,
+    "location": "Chandragiri Bypass Road near DRDA Office, Tirupati",
+    "latitude": 13.6052,
+    "longitude": 79.352,
     "peopleAffected": 0,
-    "contactName": "",
-    "contactPhone": "",
-    "contactEmail": "",
+    "contactName": "Lineman Venkatesh (Simulated)",
+    "contactPhone": "+91-9440011223",
+    "contactEmail": "venkat.spdcl@apspdcl.in",
     "peopleTrapped": "No",
     "immediateDanger": "No",
     "injuries": "None",
     "status": "Reported",
-    "createdAt": "2026-11-10T05:46:38.055Z",
+    "createdAt": "2026-11-10T08:19:54.368Z",
     "severity": "Low",
     "severityScore": 1,
     "severityReasons": [
@@ -548,10 +1038,11 @@
     "statusHistory": [
       {
         "status": "Reported",
-        "at": "2026-11-10T05:46:38.055Z",
+        "at": "2026-11-10T08:19:54.368Z",
         "note": "Incident reported via citizen emergency portal (Sample)"
       }
     ],
-    "updatedAt": "2026-11-10T06:36:38.062Z"
+    "isSample": true,
+    "updatedAt": "2026-11-10T09:09:54.370Z"
   }
 ]

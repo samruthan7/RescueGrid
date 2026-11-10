@@ -1,0 +1,162 @@
+[
+  {
+    "id": "04130cad-9daa-4214-ab6c-548db4e26c95",
+    "centerLat": 13.6335,
+    "centerLng": 79.401,
+    "radiusM": 1000,
+    "incidentIds": [
+      "INC-TEST1",
+      "INC-TEST2",
+      "INC-TEST3"
+    ],
+    "reportCount": 3,
+    "category": "Fire Emergency",
+    "severity": "Critical",
+    "status": "resolved",
+    "createdAt": "2026-11-10T10:11:37.872Z",
+    "updatedAt": "2026-11-10T10:11:37.893Z",
+    "statusHistory": []
+  },
+  {
+    "id": "d9acad2d-6fb3-480e-85e8-cea53e7864ca",
+    "centerLat": 13.6335,
+    "centerLng": 79.401,
+    "radiusM": 1000,
+    "incidentIds": [
+      "INC-TEST1",
+      "INC-TEST2",
+      "INC-TEST3"
+    ],
+    "reportCount": 3,
+    "category": "Fire Emergency",
+    "severity": "Critical",
+    "status": "resolved",
+    "createdAt": "2026-11-10T10:09:43.319Z",
+    "updatedAt": "2026-11-10T10:09:43.343Z",
+    "statusHistory": []
+  },
+  {
+    "id": "e29f69df-bb45-435d-ae3b-df190347666e",
+    "centerLat": 13.6335,
+    "centerLng": 79.401,
+    "radiusM": 1000,
+    "incidentIds": [
+      "INC-TEST1",
+      "INC-TEST2",
+      "INC-TEST3"
+    ],
+    "reportCount": 3,
+    "category": "Fire Emergency",
+    "severity": "Critical",
+    "status": "resolved",
+    "createdAt": "2026-11-10T10:05:45.857Z",
+    "updatedAt": "2026-11-10T10:05:45.878Z",
+    "statusHistory": []
+  },
+  {
+    "id": "979ae8d0-5599-4e58-a727-bee9febb47a7",
+    "centerLat": 13.6335,
+    "centerLng": 79.401,
+    "radiusM": 1000,
+    "incidentIds": [
+      "INC-TEST1",
+      "INC-TEST2",
+      "INC-TEST3"
+    ],
+    "reportCount": 3,
+    "category": "Fire Emergency",
+    "severity": "Critical",
+    "status": "resolved",
+    "createdAt": "2026-11-10T10:02:45.441Z",
+    "updatedAt": "2026-11-10T10:02:45.457Z"
+  },
+  {
+    "id": "c6ff2d18-a80b-4b61-b7f8-585ad6ef0159",
+    "centerLat": 13.6335,
+    "centerLng": 79.401,
+    "radiusM": 1000,
+    "incidentIds": [
+      "INC-TEST1",
+      "INC-TEST2",
+      "INC-TEST3"
+    ],
+    "reportCount": 3,
+    "category": "Fire Emergency",
+    "severity": "Critical",
+    "status": "resolved",
+    "createdAt": "2026-11-10T10:01:50.200Z",
+    "updatedAt": "2026-11-10T10:01:50.218Z"
+  },
+  {
+    "id": "7441dbb3-d8ea-4fe8-b1fb-36ef38ab3fc4",
+    "centerLat": 13.6335,
+    "centerLng": 79.401,
+    "radiusM": 1000,
+    "incidentIds": [
+      "INC-TEST1",
+      "INC-TEST2",
+      "INC-TEST3"
+    ],
+    "reportCount": 3,
+    "category": "Fire Emergency",
+    "severity": "Critical",
+    "status": "resolved",
+    "createdAt": "2026-11-10T09:52:00.139Z",
+    "updatedAt": "2026-11-10T09:52:00.163Z"
+  },
+  {
+    "id": "062011fc-5b5d-4c71-a2c6-c0b5a65d471d",
+    "centerLat": 13.6335,
+    "centerLng": 79.401,
+    "radiusM": 1000,
+    "incidentIds": [
+      "INC-TEST1",
+      "INC-TEST2",
+      "INC-TEST3"
+    ],
+    "reportCount": 3,
+    "category": "Fire Emergency",
+    "severity": "Critical",
+    "status": "resolved",
+    "createdAt": "2026-11-10T09:28:38.385Z",
+    "updatedAt": "2026-11-10T09:28:38.405Z"
+  },
+  {
+    "id": "c9c870ab-0256-4afc-8bde-2a9defe0e0bd",
+    "centerLat": 13.63314,
+    "centerLng": 79.40134,
+    "radiusM": 1000,
+    "incidentIds": [
+      "INC-92LMF",
+      "INC-KQCHG",
+      "INC-DEMO01",
+      "INC-DEMO02",
+      "INC-DEMO03"
+    ],
+    "reportCount": 5,
+    "category": "Other Emergencies",
+    "severity": "Critical",
+    "status": "resolved",
+    "createdAt": "2026-11-10T09:19:35.468Z",
+    "updatedAt": "2026-11-10T09:27:35.226Z"
+  },
+  {
+    "id": "fe3b864f-5a01-46ff-9629-d16915e3708e",
+    "centerLat": 13.633175,
+    "centerLng": 79.4013,
+    "radiusM": 1000,
+    "incidentIds": [
+      "INC-DEMO01",
+      "INC-DEMO02",
+      "INC-DEMO03",
+      "INC-DEMO11",
+      "INC-KQCHG"
+    ],
+    "reportCount": 5,
+    "category": "Other Emergencies",
+    "severity": "Critical",
+    "status": "resolved",
+    "createdAt": "2026-11-10T09:09:54.380Z",
+    "updatedAt": "2026-11-10T09:18:40.202Z"
+  }
+]

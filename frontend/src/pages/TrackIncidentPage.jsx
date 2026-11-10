@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { 
   Search, 
@@ -10,12 +10,33 @@ import {
   Loader2, 
   History,
   CheckCircle2,
-  Calendar
+  Calendar,
+  Bot,
+  ShieldAlert
 } from 'lucide-react';
 import SeverityBadge from '../components/SeverityBadge';
 import StatusBadge from '../components/StatusBadge';
 import { incidentApi } from '../services/api';
 import { formatExactTime } from '../utils/formatters';
+
+function ConfidenceBar({ confidence }) {
+  const pct = Math.round((confidence || 0) * 100);
+  const color = pct >= 80 ? '#22C55E' : pct >= 60 ? '#EAB308' : '#F97316';
+  return (
+    <div className="space-y-1">
+      <div className="flex justify-between text-xs text-zinc-400">
+        <span>AI Confidence</span>
+        <span className="font-mono font-bold" style={{ color }}>{pct}%</span>
+      </div>
+      <div className="w-full h-2 bg-zinc-800 rounded-full overflow-hidden">
+        <div
+          className="h-full rounded-full transition-all duration-700"
+          style={{ width: `${pct}%`, backgroundColor: color }}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function TrackIncidentPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -26,6 +47,20 @@ export default function TrackIncidentPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  // AI polling
+  const [aiStatus, setAiStatus] = useState(null);
+  const [aiAnalysis, setAiAnalysis] = useState(null);
+  const pollingRef = useRef(null);
+  const pollCountRef = useRef(0);
+  const MAX_POLLS = 24;
+
+  const stopPolling = () => {
+    if (pollingRef.current) {
+      clearInterval(pollingRef.current);
+      pollingRef.current = null;
+    }
+  };
+
   const fetchIncident = async (idToSearch) => {
     const cleanId = idToSearch.trim().toUpperCase();
     if (!cleanId) return;
@@ -33,11 +68,30 @@ export default function TrackIncidentPage() {
     setLoading(true);
     setError(null);
     setIncident(null);
+    stopPolling();
+    pollCountRef.current = 0;
 
     try {
       const data = await incidentApi.trackIncident(cleanId);
       setIncident(data);
+      setAiStatus(data.aiStatus);
+      setAiAnalysis(data.aiAnalysis);
       setSearchParams({ id: cleanId });
+
+      // Start AI polling if pending
+      if (data.aiStatus === 'pending' || !data.aiStatus) {
+        pollingRef.current = setInterval(async () => {
+          pollCountRef.current += 1;
+          if (pollCountRef.current > MAX_POLLS) { stopPolling(); return; }
+          try {
+            const updated = await incidentApi.trackIncident(cleanId);
+            setIncident(updated);
+            setAiStatus(updated.aiStatus);
+            setAiAnalysis(updated.aiAnalysis);
+            if (updated.aiStatus && updated.aiStatus !== 'pending') stopPolling();
+          } catch (e) { /* ignore */ }
+        }, 5000);
+      }
     } catch (err) {
       setError(
         err.response?.data?.error || `No emergency record matching ID "${cleanId}" was found in the repository.`
@@ -51,6 +105,7 @@ export default function TrackIncidentPage() {
     if (initialId) {
       fetchIncident(initialId);
     }
+    return () => stopPolling();
   }, [initialId]);
 
   const handleSubmit = (e) => {
@@ -195,12 +250,70 @@ export default function TrackIncidentPage() {
               </div>
             </div>
 
+            {/* AI Video Analysis compact section */}
+            {(() => {
+              const currentAiStatus = aiStatus || incident.aiStatus;
+              const currentAiAnalysis = aiAnalysis || incident.aiAnalysis;
+              const aiFailed = currentAiStatus === 'failed';
+              const aiDone = currentAiStatus && currentAiStatus !== 'pending' && !aiFailed;
+              return (
+                <div className="rounded-xl border border-zinc-800 overflow-hidden">
+                  <div className="bg-[#0d1117] border-b border-zinc-800 px-4 py-2.5 flex items-center gap-2">
+                    <Bot className="w-4 h-4 text-gold" />
+                    <span className="text-xs uppercase tracking-wider text-gold font-bold">AI Video Analysis</span>
+                  </div>
+                  <div className="p-4 space-y-3">
+                    {(!currentAiStatus || currentAiStatus === 'pending') && (
+                      <div className="flex items-center gap-3">
+                        <Loader2 className="w-5 h-5 text-gold animate-spin shrink-0" />
+                        <div>
+                          <p className="text-xs font-semibold text-gold">AI is analyzing the video...</p>
+                          <p className="text-[11px] text-zinc-500">Refresh or wait for automatic update.</p>
+                        </div>
+                      </div>
+                    )}
+                    {aiFailed && (
+                      <p className="text-xs text-zinc-500">AI analysis unavailable — rule-based severity applies.</p>
+                    )}
+                    {aiDone && currentAiAnalysis && (
+                      <div className="space-y-3">
+                        {incident.needsHumanReview && (
+                          <div className="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/40 text-amber-300 text-xs flex items-start gap-2">
+                            <ShieldAlert className="w-4 h-4 shrink-0" />
+                            <span>⚠️ Requires human authority review before final severity is confirmed.</span>
+                          </div>
+                        )}
+                        {currentAiAnalysis.confidence != null && (
+                          <ConfidenceBar confidence={currentAiAnalysis.confidence} />
+                        )}
+                        {currentAiAnalysis.summary && (
+                          <p className="text-xs text-zinc-200 leading-relaxed">{currentAiAnalysis.summary}</p>
+                        )}
+                        {currentAiAnalysis.hazards_visible && currentAiAnalysis.hazards_visible.length > 0 && (
+                          <div className="flex flex-wrap gap-1.5">
+                            {currentAiAnalysis.hazards_visible.map((h, i) => (
+                              <span key={i} className="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-severity-critical/15 text-severity-critical border border-severity-critical/30">
+                                {h}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                    {aiDone && !currentAiAnalysis && (
+                      <p className="text-xs text-zinc-500">Analysis complete. Final severity shown above.</p>
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
+
             {/* Location */}
             <div className="bg-[#181818] p-4 rounded-xl border border-zinc-800 flex items-start gap-2.5">
               <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
               <div>
                 <span className="text-[11px] uppercase tracking-wider text-zinc-400 block font-semibold">Reported Location</span>
-                <p className="text-xs text-zinc-200 mt-0.5">{incident.location}</p>
+                <p className="text-xs text-zinc-200 mt-0.5">{incident.location || (incident.latitude != null && incident.longitude != null ? `Approximate area: ${incident.latitude}, ${incident.longitude}` : 'Location details are kept private')}</p>
               </div>
             </div>
 

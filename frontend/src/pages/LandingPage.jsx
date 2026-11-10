@@ -19,16 +19,23 @@ import {
 } from 'lucide-react';
 import HeroGlobe3D from '../components/HeroGlobe3D';
 import TiltCard from '../components/TiltCard';
+import IncidentMap from '../components/IncidentMap';
 import { incidentApi } from '../services/api';
 
 export default function LandingPage() {
   const [stats, setStats] = useState(null);
+  const [publicIncidents, setPublicIncidents] = useState([]);
 
   useEffect(() => {
     // Quick load of public overview numbers if available
     incidentApi.getStats()
       .then(data => setStats(data))
       .catch(() => {});
+
+    // Fetch privacy-safe public map coordinates
+    incidentApi.getPublicMap()
+      .then(data => setPublicIncidents(data || []))
+      .catch(err => console.warn('Public map fetch warning:', err.message));
   }, []);
 
   return (
@@ -95,6 +102,52 @@ export default function LandingPage() {
             <div className="lg:col-span-5 flex items-center justify-center relative">
               <HeroGlobe3D />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Public Live Incident Map Section (Privacy-Safe ~110m Fuzzed Coordinates) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-surface rounded-2xl border border-gold/30 p-6 sm:p-8 space-y-5 shadow-2xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-zinc-800">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-severity-critical animate-ping"></span>
+                <span className="text-xs uppercase tracking-wider text-gold font-bold">Public Situational Awareness</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-gold tracking-tight mt-1">
+                Live Emergency Incident Map
+              </h2>
+              <p className="text-xs text-zinc-400 mt-1">
+                Real-time privacy-safe incident distribution across Tirupati & regional emergency response sectors.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3 self-start sm:self-auto">
+              <span className="text-xs text-zinc-400 bg-black/60 px-3 py-1.5 rounded-xl border border-zinc-800 font-mono">
+                <strong className="text-gold">{publicIncidents.length}</strong> active mapped coordinates
+              </span>
+              <Link
+                to="/report"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-gold text-black text-xs font-bold uppercase tracking-wider hover:bg-gold-light transition-colors"
+              >
+                <span>Report Now</span>
+              </Link>
+            </div>
+          </div>
+
+          <IncidentMap
+            incidents={publicIncidents}
+            height="440px"
+          />
+
+          <div className="flex flex-wrap items-center justify-between text-xs text-zinc-400 pt-1">
+            <span className="text-[11px] text-zinc-500">
+              * Privacy safeguard active: Geographic coordinates are fuzzed to ~110m resolution. Personal identities and addresses are strictly concealed.
+            </span>
+            <Link to="/track" className="text-gold hover:underline text-xs">
+              Track specific reference number →
+            </Link>
           </div>
         </div>
       </section>

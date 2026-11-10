@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, Hourglass, Activity, CheckCircle2 } from 'lucide-react';
+import { Clock, Shield, Activity, CheckCircle2 } from 'lucide-react';
 
 export default function StatusBadge({ status, size = 'md' }) {
   const norm = status || 'Reported';
@@ -12,13 +12,13 @@ export default function StatusBadge({ status, size = 'md' }) {
     label: 'Reported'
   };
 
-  if (norm === 'Pending') {
+  if (norm === 'Assigned') {
     config = {
-      bg: 'bg-status-pending/15',
-      text: 'text-status-pending',
-      border: 'border-status-pending/30',
-      icon: Hourglass,
-      label: 'Pending'
+      bg: 'bg-purple-500/15',
+      text: 'text-[#A855F7]',
+      border: 'border-purple-500/30',
+      icon: Shield,
+      label: 'Assigned'
     };
   } else if (norm === 'In Progress') {
     config = {
@@ -39,6 +39,7 @@ export default function StatusBadge({ status, size = 'md' }) {
   }
 
   const Icon = config.icon;
+  const statusColor = { Reported: '#94A3B8', Assigned: '#A855F7', 'In Progress': '#3B82F6', Resolved: '#22C55E' }[config.label];
 
   const sizeClasses = size === 'sm' 
     ? 'text-xs px-2 py-0.5 gap-1' 
@@ -48,7 +49,8 @@ export default function StatusBadge({ status, size = 'md' }) {
 
   return (
     <span
-      className={`inline-flex items-center rounded-full border ${config.bg} ${config.text} ${config.border} ${sizeClasses}`}
+      className={`inline-flex items-center rounded-full border ${sizeClasses}`}
+      style={{ color: statusColor, borderColor: `${statusColor}4D`, backgroundColor: `${statusColor}26` }}
     >
       <Icon className={size === 'lg' ? 'w-4 h-4' : 'w-3.5 h-3.5'} />
       <span>{config.label}</span>
