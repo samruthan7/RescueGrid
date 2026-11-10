@@ -1,0 +1,19 @@
+{
+  "name": "rescuegrid",
+  "version": "1.0.0",
+  "description": "RescueGrid: Emergency Incident Reporting & Monitoring Platform",
+  "scripts": {
+    "seed": "cd backend && npm run seed",
+    "test": "cd backend && npm test",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev"
+  },
+  "keywords": [
+    "emergency",
+    "hackathon",
+    "code-clash-2026",
+    "disaster-monitoring"
+  ],
+  "author": "RescueGrid Team",
+  "license": "MIT"
+}

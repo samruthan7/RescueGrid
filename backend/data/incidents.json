@@ -1,0 +1,557 @@
+[
+  {
+    "id": "INC-U5T29",
+    "title": "3 car collision",
+    "description": "car accidents near crescent college",
+    "category": "Road Accident",
+    "location": "GPS Coordinates [12.876661, 80.084504]",
+    "latitude": 12.876661,
+    "longitude": 80.084504,
+    "peopleAffected": 2,
+    "contactName": "",
+    "contactPhone": "",
+    "contactEmail": "",
+    "peopleTrapped": "Yes",
+    "immediateDanger": "No",
+    "injuries": "Minor",
+    "severity": "High",
+    "severityScore": 7,
+    "severityReasons": [
+      "2 person(s) affected (+1)",
+      "Road Accident category base weight (+2)",
+      "People trapped confirmed (+3)",
+      "Minor injuries reported (+1)"
+    ],
+    "severityOverride": null,
+    "status": "Reported",
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T07:13:47.130Z",
+        "note": "Initial incident report logged"
+      }
+    ],
+    "createdAt": "2026-11-10T07:13:47.130Z",
+    "updatedAt": "2026-11-10T07:13:47.130Z"
+  },
+  {
+    "id": "INC-KTA2L",
+    "title": "2 car collision",
+    "description": "2-3 people affected near crescent",
+    "category": "Road Accident",
+    "location": "GPS Coordinates [12.87663, 80.084532]",
+    "latitude": 12.87663,
+    "longitude": 80.084532,
+    "peopleAffected": 3,
+    "contactName": "",
+    "contactPhone": "",
+    "contactEmail": "",
+    "peopleTrapped": "Yes",
+    "immediateDanger": "Yes",
+    "injuries": "Serious",
+    "severity": "Critical",
+    "severityScore": 13,
+    "severityReasons": [
+      "3 people affected (+2)",
+      "Road Accident category base weight (+2)",
+      "People trapped confirmed (+3)",
+      "Immediate danger to life reported (+3)",
+      "Serious injuries confirmed (+3)"
+    ],
+    "severityOverride": null,
+    "status": "Reported",
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T06:52:16.807Z",
+        "note": "Initial incident report logged"
+      }
+    ],
+    "createdAt": "2026-11-10T06:52:16.807Z",
+    "updatedAt": "2026-11-10T06:52:16.807Z"
+  },
+  {
+    "id": "INC-DEMO01",
+    "title": "[TEST] Multi-Story Warehouse Structural Fire",
+    "description": "Industrial warehouse on 4th Avenue engulfed in flames. Thick black smoke spreading across nearby residential streets. 4 warehouse staff stranded near loading bay.",
+    "category": "Fire Emergency",
+    "location": "442 Industrial Parkway, Sector 8",
+    "latitude": 37.7749,
+    "longitude": -122.4194,
+    "peopleAffected": 4,
+    "contactName": "Officer Miller (Simulated)",
+    "contactPhone": "+1-555-0192",
+    "contactEmail": "miller.test@cityops.gov",
+    "peopleTrapped": "Yes",
+    "immediateDanger": "Yes",
+    "injuries": "Serious",
+    "status": "In Progress",
+    "createdAt": "2026-11-10T06:18:38.054Z",
+    "severity": "Critical",
+    "severityScore": 18,
+    "severityReasons": [
+      "4 people affected (+2)",
+      "Fire Emergency category base weight (+3)",
+      "People trapped confirmed (+3)",
+      "Immediate danger to life reported (+3)",
+      "Serious injuries confirmed (+3)",
+      "Critical keyword(s) detected [spreading] (+2)",
+      "Moderate keyword(s) detected [smoke, stranded] (+2)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T06:18:38.054Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      },
+      {
+        "status": "Pending",
+        "at": "2026-11-10T06:20:38.054Z",
+        "note": "Triaged by Dispatch Control"
+      },
+      {
+        "status": "In Progress",
+        "at": "2026-11-10T06:26:38.054Z",
+        "note": "First responder unit dispatched to coordinates"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.061Z"
+  },
+  {
+    "id": "INC-DEMO02",
+    "title": "[TEST] Partial Commercial Plaza Awning Collapse",
+    "description": "Heavy concrete awning collapsed above entrance of shopping plaza. Rubble is blocking entrance. Bystanders report people trapped underneath debris.",
+    "category": "Building Collapse",
+    "location": "Central Plaza Mall, North Gate, Grand Ave",
+    "latitude": 37.7833,
+    "longitude": -122.4167,
+    "peopleAffected": 6,
+    "contactName": "Sarah Jenkins (Simulated)",
+    "contactPhone": "+1-555-0143",
+    "contactEmail": "sjenkins.test@example.com",
+    "peopleTrapped": "Yes",
+    "immediateDanger": "Yes",
+    "injuries": "Serious",
+    "status": "Reported",
+    "createdAt": "2026-11-10T06:29:38.055Z",
+    "severity": "Critical",
+    "severityScore": 19,
+    "severityReasons": [
+      "High impact: 6 people affected (+3)",
+      "Building Collapse category base weight (+3)",
+      "People trapped confirmed (+3)",
+      "Immediate danger to life reported (+3)",
+      "Serious injuries confirmed (+3)",
+      "Critical keyword(s) detected [trapped, collapse] (+4)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T06:29:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.061Z"
+  },
+  {
+    "id": "INC-DEMO03",
+    "title": "[TEST] Subway Station Cardiac Arrest - Unconscious Passenger",
+    "description": "Passenger collapsed near turnstile ticket counter. Citizen reports victim is unconscious and not breathing. CPR initiated by bystander.",
+    "category": "Medical Emergency",
+    "location": "Metro Station Metro Level 2, 8th & Market",
+    "latitude": 37.7795,
+    "longitude": -122.4137,
+    "peopleAffected": 1,
+    "contactName": "Transit Guard Evans (Simulated)",
+    "contactPhone": "+1-555-0188",
+    "contactEmail": "guard.evans@transit.gov",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "Serious",
+    "status": "Pending",
+    "createdAt": "2026-11-10T06:11:38.055Z",
+    "severity": "Critical",
+    "severityScore": 13,
+    "severityReasons": [
+      "1 person(s) affected (+1)",
+      "Medical Emergency category base weight (+2)",
+      "Immediate danger to life reported (+3)",
+      "Serious injuries confirmed (+3)",
+      "Critical keyword(s) detected [unconscious, not breathing] (+4)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T06:11:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      },
+      {
+        "status": "Pending",
+        "at": "2026-11-10T06:14:38.055Z",
+        "note": "Triaged by Dispatch Control, awaiting crew assignment"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.061Z"
+  },
+  {
+    "id": "INC-DEMO04",
+    "title": "[TEST] High-Speed Highway Multi-Vehicle Pileup",
+    "description": "3 sedans and a delivery van collided during sudden fog. Several motorists injured and roadway completely blocked across both lanes.",
+    "category": "Road Accident",
+    "location": "Interstate Highway 101 Northbound, Exit 43B",
+    "latitude": 37.7612,
+    "longitude": -122.4021,
+    "peopleAffected": 5,
+    "contactName": "David Lee (Simulated)",
+    "contactPhone": "+1-555-0155",
+    "contactEmail": "dlee.test@example.com",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "Serious",
+    "status": "In Progress",
+    "createdAt": "2026-11-10T05:54:38.055Z",
+    "severity": "Critical",
+    "severityScore": 12,
+    "severityReasons": [
+      "5 people affected (+2)",
+      "Road Accident category base weight (+2)",
+      "Immediate danger to life reported (+3)",
+      "Serious injuries confirmed (+3)",
+      "Moderate keyword(s) detected [injured, blocked] (+2)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T05:54:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      },
+      {
+        "status": "Pending",
+        "at": "2026-11-10T05:56:38.055Z",
+        "note": "Triaged by Dispatch Control"
+      },
+      {
+        "status": "In Progress",
+        "at": "2026-11-10T06:02:38.055Z",
+        "note": "First responder unit dispatched to coordinates"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.062Z"
+  },
+  {
+    "id": "INC-DEMO05",
+    "title": "[TEST] Flash River Surge Threatening Riverside Cottages",
+    "description": "Torrential downpour has caused river banks to swell. Rapidly rising water has submerged driveways and is reaching lower residential floor levels.",
+    "category": "Flood",
+    "location": "Creek Road & Riverview Terrace",
+    "latitude": 37.7554,
+    "longitude": -122.4287,
+    "peopleAffected": 8,
+    "contactName": "Elena Rostova (Simulated)",
+    "contactPhone": "+1-555-0167",
+    "contactEmail": "erostova@example.org",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "Minor",
+    "status": "Pending",
+    "createdAt": "2026-11-10T05:31:38.055Z",
+    "severity": "Critical",
+    "severityScore": 11,
+    "severityReasons": [
+      "High impact: 8 people affected (+3)",
+      "Flood emergency category base weight (+2)",
+      "Immediate danger to life reported (+3)",
+      "Minor injuries reported (+1)",
+      "Critical keyword(s) detected [rising water] (+2)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T05:31:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      },
+      {
+        "status": "Pending",
+        "at": "2026-11-10T05:34:38.055Z",
+        "note": "Triaged by Dispatch Control, awaiting crew assignment"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.062Z"
+  },
+  {
+    "id": "INC-DEMO06",
+    "title": "[TEST] Industrial Gas Leak Smell Near School Playground",
+    "description": "Strong, persistent sulfur/gas leak odor detected coming from adjacent pipeline maintenance valve near school perimeter.",
+    "category": "Other Emergencies",
+    "location": "Elmwood Primary School Perimeter, 12 Oak Street",
+    "latitude": 37.7689,
+    "longitude": -122.4412,
+    "peopleAffected": 30,
+    "contactName": "Principal Vance (Simulated)",
+    "contactPhone": "+1-555-0111",
+    "contactEmail": "pvance.test@schoolops.org",
+    "peopleTrapped": "No",
+    "immediateDanger": "Yes",
+    "injuries": "None",
+    "status": "Reported",
+    "createdAt": "2026-11-10T06:24:38.055Z",
+    "severity": "Critical",
+    "severityScore": 10,
+    "severityReasons": [
+      "Mass casualty potential: 30 people affected (+4)",
+      "Category 'Other Emergencies' base weight (+1)",
+      "Immediate danger to life reported (+3)",
+      "Critical keyword(s) detected [gas leak] (+2)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T06:24:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.062Z"
+  },
+  {
+    "id": "INC-DEMO07",
+    "title": "[TEST] Kitchen Grease Fire Contained in Restaurant",
+    "description": "Small exhaust hood grease fire broke out during lunch rush. Staff extinguished bulk with dry powder, but heavy smoke remains throughout kitchen.",
+    "category": "Fire Emergency",
+    "location": "Bistro 44, 44 Market Square",
+    "latitude": 37.7915,
+    "longitude": -122.3999,
+    "peopleAffected": 2,
+    "contactName": "Chef Marco (Simulated)",
+    "contactPhone": "+1-555-0134",
+    "contactEmail": "marco.kitchen@example.com",
+    "peopleTrapped": "No",
+    "immediateDanger": "No",
+    "injuries": "Minor",
+    "status": "Resolved",
+    "createdAt": "2026-11-10T04:16:38.055Z",
+    "severity": "Medium",
+    "severityScore": 6,
+    "severityReasons": [
+      "2 person(s) affected (+1)",
+      "Fire Emergency category base weight (+3)",
+      "Minor injuries reported (+1)",
+      "Moderate keyword(s) detected [smoke] (+1)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T04:16:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      },
+      {
+        "status": "In Progress",
+        "at": "2026-11-10T04:21:38.055Z",
+        "note": "Response unit on scene"
+      },
+      {
+        "status": "Resolved",
+        "at": "2026-11-10T04:46:38.055Z",
+        "note": "Scene cleared, medical check completed, hazard neutralized"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.062Z"
+  },
+  {
+    "id": "INC-DEMO08",
+    "title": "[TEST] Fender Bender Collision in Mall Parking Lot",
+    "description": "Slow speed rear-end collision between two cars leaving parking structure. Minor bumper dent, passenger complaining of wrist sprain.",
+    "category": "Road Accident",
+    "location": "Westfield Mall Lower Parking B3",
+    "latitude": 37.7842,
+    "longitude": -122.4075,
+    "peopleAffected": 2,
+    "contactName": "Chloe Bennett (Simulated)",
+    "contactPhone": "+1-555-0178",
+    "contactEmail": "cbennett@example.com",
+    "peopleTrapped": "No",
+    "immediateDanger": "No",
+    "injuries": "Minor",
+    "status": "Resolved",
+    "createdAt": "2026-11-10T03:16:38.055Z",
+    "severity": "Medium",
+    "severityScore": 4,
+    "severityReasons": [
+      "2 person(s) affected (+1)",
+      "Road Accident category base weight (+2)",
+      "Minor injuries reported (+1)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T03:16:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      },
+      {
+        "status": "In Progress",
+        "at": "2026-11-10T03:21:38.055Z",
+        "note": "Response unit on scene"
+      },
+      {
+        "status": "Resolved",
+        "at": "2026-11-10T03:46:38.055Z",
+        "note": "Scene cleared, medical check completed, hazard neutralized"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.062Z"
+  },
+  {
+    "id": "INC-DEMO09",
+    "title": "[TEST] Overflowing Storm Drain Backed Up On Hillside",
+    "description": "Municipal storm drain clogged with fallen autumn leaves and mud. Water pooling across sidewalk, pedestrian walkway partially submerged.",
+    "category": "Flood",
+    "location": "Crestview Blvd & Highlands Way",
+    "latitude": 37.7441,
+    "longitude": -122.4439,
+    "peopleAffected": 0,
+    "contactName": "Marcus Wright (Simulated)",
+    "contactPhone": "",
+    "contactEmail": "",
+    "peopleTrapped": "No",
+    "immediateDanger": "No",
+    "injuries": "None",
+    "status": "Pending",
+    "createdAt": "2026-11-10T05:06:38.055Z",
+    "severity": "Low",
+    "severityScore": 2,
+    "severityReasons": [
+      "No people directly affected specified (+0)",
+      "Flood emergency category base weight (+2)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T05:06:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      },
+      {
+        "status": "Pending",
+        "at": "2026-11-10T05:09:38.055Z",
+        "note": "Triaged by Dispatch Control, awaiting crew assignment"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.062Z"
+  },
+  {
+    "id": "INC-DEMO10",
+    "title": "[TEST] Cracking Brickwork on Aging Vacant Facade",
+    "description": "Noticed significant hairline cracks and loose decorative masonry along upper parapet of abandoned brick commercial building.",
+    "category": "Building Collapse",
+    "location": "Old Port District, Warehouse #14",
+    "latitude": 37.7711,
+    "longitude": -122.3892,
+    "peopleAffected": 0,
+    "contactName": "Building Inspector Roy (Simulated)",
+    "contactPhone": "+1-555-0199",
+    "contactEmail": "r.inspector@city.gov",
+    "peopleTrapped": "No",
+    "immediateDanger": "No",
+    "injuries": "None",
+    "status": "Reported",
+    "createdAt": "2026-11-10T04:46:38.055Z",
+    "severity": "Low",
+    "severityScore": 3,
+    "severityReasons": [
+      "No people directly affected specified (+0)",
+      "Building Collapse category base weight (+3)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T04:46:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.062Z"
+  },
+  {
+    "id": "INC-DEMO11",
+    "title": "[TEST] Faint in Community Library Reading Room",
+    "description": "Student felt dizzy and fainted due to dehydration. Conscious now, drinking water and resting with staff.",
+    "category": "Medical Emergency",
+    "location": "Civic Center Library, 2nd Floor Study Hall",
+    "latitude": 37.7788,
+    "longitude": -122.4172,
+    "peopleAffected": 1,
+    "contactName": "Librarian Davis (Simulated)",
+    "contactPhone": "+1-555-0122",
+    "contactEmail": "davis.lib@cityops.gov",
+    "peopleTrapped": "No",
+    "immediateDanger": "No",
+    "injuries": "None",
+    "status": "Resolved",
+    "createdAt": "2026-11-10T01:36:38.055Z",
+    "severity": "Low",
+    "severityScore": 3,
+    "severityReasons": [
+      "1 person(s) affected (+1)",
+      "Medical Emergency category base weight (+2)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T01:36:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      },
+      {
+        "status": "In Progress",
+        "at": "2026-11-10T01:41:38.055Z",
+        "note": "Response unit on scene"
+      },
+      {
+        "status": "Resolved",
+        "at": "2026-11-10T02:06:38.055Z",
+        "note": "Scene cleared, medical check completed, hazard neutralized"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.062Z"
+  },
+  {
+    "id": "INC-DEMO12",
+    "title": "[TEST] Fallen Traffic Signal Pole In Median",
+    "description": "High winds snapped mounting bolts of pedestrian signal pole. Pole is resting safely across lawn median, not obstructing traffic lane.",
+    "category": "Other Emergencies",
+    "location": "Pine Street & 5th Avenue Crosswalk",
+    "latitude": 37.7922,
+    "longitude": -122.4044,
+    "peopleAffected": 0,
+    "contactName": "",
+    "contactPhone": "",
+    "contactEmail": "",
+    "peopleTrapped": "No",
+    "immediateDanger": "No",
+    "injuries": "None",
+    "status": "Reported",
+    "createdAt": "2026-11-10T05:46:38.055Z",
+    "severity": "Low",
+    "severityScore": 1,
+    "severityReasons": [
+      "No people directly affected specified (+0)",
+      "Category 'Other Emergencies' base weight (+1)"
+    ],
+    "severityOverride": null,
+    "statusHistory": [
+      {
+        "status": "Reported",
+        "at": "2026-11-10T05:46:38.055Z",
+        "note": "Incident reported via citizen emergency portal (Sample)"
+      }
+    ],
+    "updatedAt": "2026-11-10T06:36:38.062Z"
+  }
+]
